@@ -51,3 +51,6 @@ forecast = [
 ]
 
 #----- your code below -----
+forecast.each do |attr|
+    puts "#{attr["day"]}: High of #{attr["temperatures"]["high"]}, Low of #{attr["temperatures"]["low"]}"
+    end

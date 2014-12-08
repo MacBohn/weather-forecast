@@ -176,34 +176,39 @@ forecast = [
   {
     "day"=>"Sunday",
     "temperatures"=> {
-      "12am"=>79,
-      "1am"=>87,
-      "2am"=>81,
-      "3am"=>71,
-      "4am"=>60,
-      "5am"=>64,
-      "6am"=>87,
-      "7am"=>66,
-      "8am"=>65,
-      "9am"=>88,
-      "10am"=>63,
-      "11am"=>84,
-      "12pm"=>86,
-      "1pm"=>78,
-      "2pm"=>73,
-      "3pm"=>65,
-      "4pm"=>74,
-      "5pm"=>75,
-      "6pm"=>79,
-      "7pm"=>64,
-      "8pm"=>70,
-      "9pm"=>70,
-      "10pm"=>67,
-      "11pm"=>66
-    }
+    "12am"=>79,
+    "1am"=>87,
+    "2am"=>81,
+    "3am"=>71,
+    "4am"=>60,
+    "5am"=>64,
+    "6am"=>87,
+    "7am"=>66,
+    "8am"=>65,
+    "9am"=>88,
+    "10am"=>63,
+    "11am"=>84,
+    "12pm"=>86,
+    "1pm"=>78,
+    "2pm"=>73,
+    "3pm"=>65,
+    "4pm"=>74,
+    "5pm"=>75,
+    "6pm"=>79,
+    "7pm"=>64,
+    "8pm"=>70,
+    "9pm"=>70,
+    "10pm"=>67,
+    "11pm"=>66
   }
+}
 ]
 
 #----- Put your code below here -----
+forecast.each do |daily_forecast|
+  temperatures = daily_forecast["temperatures"].values
+  puts "#{daily_forecast["day"]}: High of #{temperatures.max}, Low of #{temperatures.min}"
+  # puts attr
+end
 
 # http://www.ruby-doc.org/core-2.1.5/Hash.html#method-i-values
